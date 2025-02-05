@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n;
+    string s;
+    cin >> n >> s;
+
+    int antonsWin = 0, danikWin = 0;
+    for (char g : s) {
+        if (g == 'A') {
+            antonsWin++;
+        } else if (g == 'D') {
+            danikWin++;
+        }
+    }
+    if (antonsWin > danikWin) {
+        cout << "Anton";
+    } else if (antonsWin < danikWin) {
+        cout << "Danik";
+    } else {
+        cout << "Friendship";
+    }
+
+    return 0;
+}
