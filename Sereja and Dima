@@ -1,0 +1,21 @@
+n = int(input())
+cards = list(map(int, input().split()))
+ 
+sereja_points = 0
+dima_points = 0
+turn = 0  # 0 for Sereja, 1 for Dima
+ 
+while cards:
+    if cards[0] > cards[-1]:
+        chosen_card = cards.pop(0)
+    else:
+        chosen_card = cards.pop()
+ 
+    if turn == 0:
+        sereja_points += chosen_card
+    else:
+        dima_points += chosen_card
+ 
+    turn = 1 - turn  # Switch turn
+ 
+print(sereja_points, dima_points)
