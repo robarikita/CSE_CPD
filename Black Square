@@ -1,0 +1,8 @@
+calories = list(map(int, input().split()))
+game = input().strip()
+
+total_calories = 0
+for digit in game:
+    total_calories += calories[int(digit) - 1]
+
+print(total_calories)
