@@ -1,0 +1,10 @@
+name = input().strip()
+current = 'a'
+rotations = 0
+
+for letter in name:
+    diff = abs(ord(letter) - ord(current))
+    rotations += min(diff, 26 - diff)
+    current = letter
+
+print(rotations)
